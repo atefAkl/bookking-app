@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRIPVUM</title>
+    <link rel="stylesheet" href="../files/css/style.css" />
+    <link rel="stylesheet" href="../files/css/hotel.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="/index.html" class="logo">
+          <img src="../images/Logo 500x500 px.png" alt="logo" />
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#booking">booking</a>
+        <a href="#trip">Trip</a>
+        <a href="#offers">offers</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <div class="icon">
+        <i class="fas fa-user" onclick="showform()"></i>
+      </div>
+    </header>
+
+    <div class="login-form" id="loginform">
+      <i class="fas fa-times" id="form-close" onclick="hideform()"></i>
+      <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="Enter your email" />
+        <input type="password" class="box" placeholder="Enter your password" />
+        <input type="submit" value="login now" class="btn" />
+        <input type="checkbox" id="remember" />
+        <label for="remmember"> remember me</label>
+        <p>forget password? <a href="">click here</a></p>
+        <p>
+          don't have acount?
+          <a href="javascript:void(0);" onclick="GoToSignUp()">sign up</a>
+        </p>
+      </form>
+    </div>
+    <!-------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------->
+    <div class="login-form signupform">
+      <i class="fas fa-times" id="form-close" onclick="hideformSignUP()"></i>
+      <form action="">
+        <h3>Register</h3>
+        <input type="text" class="box" placeholder="Enter your name" />
+        <input type="email" class="box" placeholder="Enter your email" />
+        <input type="number" min="1" class="box" placeholder="Enter your age" />
+        <input
+          type="tel"
+          pattern="[0-9]{11}"
+          class="box"
+          placeholder="Enter your phone"
+        />
+        <input type="password" class="box" placeholder="Enter your password" />
+        <input type="password" class="box" placeholder="Confirm password" />
+        <input type="submit" value="Register now" class="btn" />
+        <p>
+          Have an accounnt?<a href="javascript:void(0);" onclick="GoToLogin()">
+            sign in</a
+          >
+        </p>
+      </form>
+    </div>
+
+    <section id="hotel-info">
+      <div class="container">
+        <div id="banner">
+          <div class="profile">
+            <div class="stars">[ <span class="stars-count">  </span> stars]</div>
+            <div id="hotel-img"></div>
+            <div id="hotel-name"></div>
+          </div>
+        </div>
+        <div class="space" style="height: 120px"></div>
+        <nav>
+          <ul class="navs">
+            <li class="nav-item active" data-open="about">about</li>
+            <li class="nav-item" data-open="pricing">pricing</li>
+            <li class="nav-item" data-open="images">images</li>
+            <li class="nav-item" data-open="offers">offers</li>
+          </ul>
+          <div class="nav-contents">
+            <div class="tab active" id="about">
+              <h3 id="hotel-location"></h3>
+              <h2>About <span class="hotel-name"></span></h2>
+              <p id="description"></p>
+              <h2>History </span></h2>
+              <p id="history"></p>
+
+              <div id="rating-section">
+                <h3>Clients Ratings <span id="rating"></span></h3>
+                <h3>Total Votes <span id="votes"></span></h3>
+                <h3> Rate <span id="rate"></span></h3>
+                <h3>details:</h3>
+                <p id="rating-details"></p>
+              </div>
+            </div>
+            <div class="tab" id="pricing">
+              <h1 style="font-size: 32px;">Pricing List</h1>
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Min</th>
+                    <th>Max</th>
+                    <th>Meals</th>
+                    <th>Remaining Units</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+              <br>
+              <br>
+              <br>
+              <h1 style="font-size: 32px;">Contacts Info</h1>
+              <table class="contacts"></table>
+            </div>
+            <div class="tab" id="images">images</div>
+            <div class="tab" id="offers">offers</div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-------------------------------------------------------------------------------->
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="../hotels.js"></script>
+    <script src="../travel.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const hotels = Hotels;
+        const hotel = hotels.find((h) => h.id == urlParams.get("id"));
+        
+        document.querySelector("#hotel-name").innerHTML = hotel.name;
+        document.querySelector(".hotel-name").innerHTML = hotel.name;
+        document.querySelector("#hotel-location").innerHTML = "#" + hotel.city;
+        document.querySelector("#description").innerHTML = hotel.desc;
+        document.querySelector(".stars-count").innerHTML = hotel.stars;
+        document.querySelector("#history").innerHTML = hotel.history;
+        document.querySelector("#hotel-img").style.backgroundImage =
+        "url('" + hotel.image + "')";
+        document.querySelector("#banner").style.backgroundImage =
+        "url('" + hotel.cover + "')";
+        const [votes, rate] = calcRating(hotel.rating);
+        const ratingStars = document.createElement('div')
+        ratingStars.innerHTML = drowStars(rate)
+        ratingStars.classList.add('rateingStars')
+        ratingStars.style.color = setStarsColor(rate)
+        document.querySelector("#rating").appendChild(ratingStars);
+        document.querySelector("#votes").innerHTML=votes;
+        document.querySelector("#rate").innerHTML=rate;
+        
+        for (let i = 0; i < 5; i++) {
+          let bar = document.createElement('div');
+          bar.classList.add('rating-bar')
+          let barText = document.createElement('div')
+          barText.classList.add('bar-text')
+          barText.innerHTML = i+1
+          
+          let barColored = document.createElement('div')
+          barColored.classList.add('bar-colored')
+          let colorRange = document.createElement('div')
+          colorRange.style.width=(hotel.rating[i]/votes*150).toFixed(0)+'px'
+          colorRange.style.backgroundColor = 'green'
+          colorRange.classList.add('color-range')
+          barColored.appendChild(colorRange)
+          let barVotes = document.createElement('div')
+          barVotes.innerHTML = hotel.rating[i]
+          barVotes.classList.add('bar-votes')
+          bar.appendChild(barText)
+          bar.appendChild(barColored)
+          bar.appendChild(barVotes)
+          document.querySelector("#rating-details").appendChild(bar);
+          
+        }
+        // Rendering Images Section
+
+        const hotelImages = document.getElementById('images')
+        const renderedImages = hotel.images.map((img)=>{
+          return `<img src="${img}" alt="${hotel.name}"/>`
+        })
+        hotelImages.innerHTML=renderedImages
+
+        // Rendering Pricing Section
+        const pricingBody=document.querySelector('#pricing table tbody')
+        const renderedPricing = hotel.prices.map((item, index)=>{
+          return (`
+            <tr>
+              <td>${++index}</td>
+              <td>${item.name}</td>
+              <td>${item.min}$</td>
+              <td>${item.max}$</td>
+              <td>${item.meals}</td>
+              <td>${item.remain}</td>
+              </tr>
+          `)
+        })
+        pricingBody.innerHTML=renderedPricing
+
+        // Rendering Contact Info
+        const contact = document.querySelector('#pricing table.contacts')
+        const renderedContacts = hotel.contact.map((item)=>{
+          return (`
+            <tr>
+              <td>${item.type}:</td>
+              <td>${item.val}:</td>
+            </tr>
+          `)
+        })
+        contact.innerHTML=renderedContacts
+
+
+        const navItems = document.querySelectorAll('.nav-item')
+        const tabs = document.querySelectorAll('.tab')
+        
+        navItems.forEach((item)=>{
+          item.addEventListener('click', function (e) {
+            let currentSelectedItem = document.querySelector('nav ul li.nav-item.active')
+            currentSelectedItem.classList.remove('active')
+            e.target.classList.add('active')
+            const the_target = item.getAttribute('data-open')
+
+            tabs.forEach(tab=>{
+              tab.classList.remove('active')
+            })
+              
+            
+            document.getElementById(the_target).classList.add('active')
+          })
+        })
+      });
+
+
+
+
+    </script>
+  </body>
+</html>
