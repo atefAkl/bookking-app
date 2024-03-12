@@ -6,8 +6,8 @@ const Hotels = [
     city: "Hurghada",
     name: "El Gouna Tourist Resort",
     desc: "El Gouna is a tourist resort located in Hurghada on the Red Sea coast. The resort dates back to 1990 when Orascom Hotels and Development developed it on a group of islands as one of its tourism projects. El Gouna is 22 km north of Hurghada International Airport, 470 km from Cairo",
-    cover: "/images/hotels/elgouna-cover.png",
-    image: "/images/hotels/El_Gouna_02.jpg",
+    cover: "./images/hotels/elgouna-cover.png",
+    image: "./images/hotels/El_Gouna_02.jpg",
     rating: [0, 500, 2000, 75, 1000],
     prices: [
       {
@@ -51,11 +51,11 @@ const Hotels = [
       },
     ],
     images: [
-      "/images/hotels/elg-AmUniv.jpg",
-      "/images/hotels/El-gouna1.jpg",
-      "/images/hotels/elg-sea-view.jpg",
-      "/images/hotels/elg-turtles-hour.jpg",
-      "/images/hotels/Elg-Yakts.jpg",
+      "./images/hotels/elg-AmUniv.jpg",
+      "./images/hotels/El-gouna1.jpg",
+      "./images/hotels/elg-sea-view.jpg",
+      "./images/hotels/elg-turtles-hour.jpg",
+      "./images/hotels/Elg-Yakts.jpg",
     ],
   },
   ///////////////////////////////////////////////////End Of Hotel Object Data
@@ -65,8 +65,8 @@ const Hotels = [
     city: "Luxur",
     name: "Winter Palace Hotel",
     desc: "Winter Palace Hotel, also known as Old Winter Palace Hotel, is a historic 5-star hotel and resort located on the east bank of the Nile in Luxor, close to the Temple of Luxor (to the south of it), with 86 rooms and 6 suites, owned and operated by Legacy Hotels, a subsidiary of Talaat Moustafa Group.",
-    cover: "/images/hotels/winter-cover.jpg",
-    image: "/images/hotels/Winter_Palace_main.jpg",
+    cover: "./images/hotels/winter-cover.jpg",
+    image: "./images/hotels/Winter_Palace_main.jpg",
     rating: [0, 5000, 200, 75, 12],
     prices: [
       {
@@ -110,11 +110,11 @@ const Hotels = [
       },
     ],
     images: [
-      "/images/hotels/elg-AmUniv.jpg",
-      "/images/hotels/El-gouna1.jpg",
-      "/images/hotels/elg-sea-view.jpg",
-      "/images/hotels/elg-turtles-hour.jpg",
-      "/images/hotels/Elg-Yakts.jpg",
+      "./images/hotels/elg-AmUniv.jpg",
+      "./images/hotels/El-gouna1.jpg",
+      "./images/hotels/elg-sea-view.jpg",
+      "./images/hotels/elg-turtles-hour.jpg",
+      "./images/hotels/Elg-Yakts.jpg",
     ],
   },
   {
@@ -122,8 +122,8 @@ const Hotels = [
     city: "Aswan",
     name: "Kempinski Hotel Soma Bay",
     desc: "Kempinski Hotel Soma Bay is a five-star hotel belonging to the Kempinski Hotel chain, located in Soma Bay, Egypt.The hotel opened in 2009 and has 325 rooms and suites, three restaurants, one large bar, a resort, and a small exercise room.",
-    cover: "/images/hotels/Kempinski-cover.jpeg",
-    image: "/images/hotels/camb-main.jpg",
+    cover: "./images/hotels/Kempinski-cover.jpeg",
+    image: "./images/hotels/camb-main.jpg",
     rating: [0, 500, 200, 4000, 120],
     prices: [
       {
@@ -178,11 +178,11 @@ const Hotels = [
       },
     ],
     images: [
-      "/images/hotels/k_1.jpeg",
-      "/images/hotels/El-gouna1.jpg",
-      "/images/hotels/elg-sea-view.jpg",
-      "/images/hotels/elg-turtles-hour.jpg",
-      "/images/hotels/Elg-Yakts.jpg",
+      "./images/hotels/k_1.jpeg",
+      "./images/hotels/El-gouna1.jpg",
+      "./images/hotels/elg-sea-view.jpg",
+      "./images/hotels/elg-turtles-hour.jpg",
+      "./images/hotels/Elg-Yakts.jpg",
     ],
   },
 ];
@@ -203,7 +203,7 @@ function renderList(arr) {
               <p> [${votes}] <span style="color: ${setStarsColor(
       rate
     )}">${drowStars(rate)}</span> [${rate}]</p>
-              <a href="/pages/hotel.html?id=${
+              <a href="./pages/hotel.html?id=${
                 hotel.id
               }" class="explore">Explore Offers</a>
           </div>
