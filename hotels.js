@@ -197,9 +197,9 @@ function renderList(arr) {
             hotel.image
           }')"></div>
           <div class="card-content">
-              <h1>${hotel.name}</h1>
+              <h2>${hotel.name}</h2>
               <h5>${hotel.city}</h5>
-              <p>${hotel.desc}</p>
+              <p class="hotel desc">${hotel.desc}</p>
               <p> [${votes}] <span style="color: ${setStarsColor(
       rate
     )}">${drowStars(rate)}</span> [${rate}]</p>

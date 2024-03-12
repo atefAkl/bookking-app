@@ -3,7 +3,7 @@
 }
 
 * {
-  font-family: poppins, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,6 +16,13 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body * {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -213,15 +220,15 @@ body {
 
 #result .content .box {
   box-shadow: 0 0 5px 2px #3333;
-  height: 200px;
+  height: 150px;
   display: flex;
   width: 100%;
 }
 
 #result .content .box .card-img {
   background-size: cover;
-  width: 300px;
-  height: 200px;
+  width: 200px;
+  height: 150px;
 }
 
 #result .content .box .card-content {
@@ -245,6 +252,19 @@ body {
 #result .content .box .card-content a.explore {
   padding: 6px 10px;
   border: 1px solid #777;
+  font-size: 16px;
+}
+#result .content .box p.desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+#result .content .box h2 {
+  font-size: 18px;
+}
+
+#result .content .box h5 {
   font-size: 16px;
 }
 
