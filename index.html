@@ -101,6 +101,58 @@
             <span>w</span>
         </h1>
         <div class="row">
+            <div class="book">
+              <form class="book-from">
+                    <div class="from-item">
+                        <label for="checkin-data">Check in Data :</label>
+                        <input type="date" onclick="CheckInDate()"  id="checkindate">
+                    </div>
+                    <div class="from-item">
+                         <label for="checkout-data">Check out Data :</label>
+                         <input type="date" onclick="CheckOutDate()" id="checkoutdate">
+                    </div>
+                    <div class="from-item">
+                         <label for="destination">destination :</label>
+                         <select id="destination" style="">
+                             <option value="cairo">Cairo</option>
+                             <option value="luxor">Luxor</option>
+                             <option value="aswan">Aswan</option>
+                             <option value="sharmelsheikh">Sharm El Sheikh</option>
+                             <option value="hurghada">Hurghada</option>
+                             <option value="Sinai">Sinai</option>
+                         </select>
+                    </div>
+                    <div class="from-item">
+                         <label for="children">Children :</label>
+                         <input type="number" min="0" value="" id="children">
+                    </div>
+                    <div class="from-item">
+                          <label for="children">Arrivall :</label>
+                          <input type="number" min="0" value="" id="children">
+                    </div>
+                    <div class="from-item">
+                          <label for="adult">How Many :</label>
+                          <input type="number" min="1" value="1" id="adult">
+                    </div>
+                    
+                    <form action="/action_page.php">
+                        <label for="vehicle1" style="display: inline-block; margin: 0; padding: 0; font-size: 14px;">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="transform: scale(1.5);vertical-align: middle; margin: 0; padding: 0; width: auto; height: 20px;">
+                            Flight
+                        </label>
+                        <label for="vehicle2" style="display: inline-block; margin: 0; padding: 0; font-size: 14px;">
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" style="transform: scale(1.5);vertical-align: middle; margin: 0; padding: 0; width: auto; height: 20px;">
+                            Hotel
+                        </label>
+                    </form>
+                      
+                    <div style="display: flex; justify-content: center;">
+                        <input type="submit" class="btn" value="Book Now" style="width: 350px;">
+                    </div>
+                      
+                  </div>
+              </div>
+        <!-- <div class="row">
           <div class="book">
             <form class="book-from">
                     <div class="from-item">
@@ -144,7 +196,7 @@
                     </div>
                     
                 </div>
-            </div>
+            </div> -->
         </section>
     <!------------------------------------------------------------------------------------>
     <!------------------------------------------------------------------------------------>

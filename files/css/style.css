@@ -367,7 +367,7 @@ section {
   padding: 0.2rem 1rem;
 }
 .book-from {
-  background-image: url(images/g-1.jpg);
+  background-image: url(../../images/bookformbg.jpg);
   color: #020202;
   padding-left: 30px;
   padding-right: 30px;
@@ -378,13 +378,14 @@ section {
 .book {
   background-color: #fffefe;
   color: #020202;
-  padding: 10px;
+  padding: 5px;
   padding-top: 0px;
 }
 .book-from {
   display: grid;
 }
 .from-item {
+  padding-left: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -400,8 +401,9 @@ section {
   color: #fff;
 }
 .book-from label,
+.book-from select,
 .book-from input {
-  width: 80%;
+  width: 90%;
 }
 
 .book-from label {
@@ -409,6 +411,7 @@ section {
   word-spacing: 5px;
   padding-bottom: 8px;
 }
+.book-from select,
 .book-from input:not(.btn) {
   margin: 10px 5 16px 5;
   padding: 12px 15px;
@@ -416,10 +419,12 @@ section {
   font-size: 17px;
   border: none;
 }
+.book-from select,
 .book-from input:not([type="checkbox"]) {
   outline: 1px solid #6b6b6b;
   box-shadow: 0 0 7px rgba(134, 134, 134, 0.61);
 }
+.book-from select:focus,
 .book-from input:focus {
   outline: 1px solid #000000;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.9);

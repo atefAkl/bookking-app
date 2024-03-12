@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIPVUM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        /* CSS for search highlight */
+        .search-highlight {
+            background-color: yellow; /* Highlight color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/Logo 500x500 px.png" alt="logo">
+            </a>
+        </div>
+        
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#booking">booking</a>
+            <a href="#trip">Trip</a>
+            <a href="#offers">offers</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+        <div class="icon">
+            <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
+            <i class="fas fa-user" onclick="showform()"></i>
+
+        </div>
+        <form action="#" class="search-form">
+            <input type="search" id="search-bar" placeholder="What you looking for...">
+            <label for="search-bar" class="fas fa-search" onclick="handleSearchIconClick()"></label>
+        </form>
+    </header>
+
+    <div class="login-form" id="loginform">
+        <i class="fas fa-times" id="form-close" onclick="hideform()"></i>
+        <form action="">
+            <h3>login</h3>
+            <input type="email" class="box" placeholder="Enter your email">
+            <input type="password" class="box" placeholder="Enter your password">
+            <input type="submit" value="login now" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remmember"> remember me</label>
+            <p>forget password? <a href="">click here</a></p>
+            <p>don't have acount? <a href="javascript:void(0);" onclick="GoToSignUp()">sign up</a></p>
+        </form>
+    </div>
+    <!-------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------->
+    <div class="login-form signupform">
+        <i class="fas fa-times" id="form-close" onclick="hideformSignUP()"></i>
+        <form action="">
+            <h3>Register</h3>
+            <input type="text" class="box" placeholder="Enter your name">
+            <input type="email" class="box" placeholder="Enter your email">
+            <input type="number" min="1" class="box" placeholder="Enter your age">
+            <input type="tel" pattern="[0-9]{11}" class="box" placeholder="Enter your phone">
+            <input type="password" class="box" placeholder="Enter your password">
+            <input type="password" class="box" placeholder="Confirm password">
+            <input type="submit" value="Register now" class="btn">
+            <p>Have an accounnt?<a href="javascript:void(0);" onclick="GoToLogin()"> sign in</a></p>
+        </form>
+    </div>
+    <!-------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>ALEX </h3>
+            <p>Discover New Places With Us, Adventure Awaits</p>
+            <a href="#" class="btn">Discover More</a>
+        </div>
+      
+
+        <div class="controls">
+            <span class="video-btn blue" data-src="images/video2.mp4"></span>
+            <span class="video-btn" data-src="images/video1.mp4"></span>
+            <span class="video-btn" data-src="images/video3.mp4"></span>
+            <span class="video-btn" data-src="images/video4.mp4"></span>
+        </div>
+        <div class="video-container">
+            <video src="images/video1.mp4 " id="video-slider" loop autoplay muted></video>
+        </div>
+    </section>
+
+    <!------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------>
+
+    images/video1.mp4
+    <!------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------>
+
+    <section class="packages" id="trip">
+
+        <h1 class="heading">
+            <span>t</span>
+            <span>r</span>
+            <span>i</span>
+            <span>p</span>
+        </h1>
+
+        <div class="container">
+            <div class="box">
+                <img src="images/hurhada.jpeg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i> Hurghada</h3>
+                    <p>تقع مدينة الغردقة على الشاطئ الغربي للبحر الأحمر</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">EGP 1150.00 <span>EGP 1400.00</span></div>
+                    <a href="#" class="btn">check now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/alex.jpeg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>alex</h3>
+                    <p>الإسْكَنْدَرِيَّة هي العاصمة الثانية لمصر وكانت عاصمتها قديمًا</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">EGP 800.00 <span>EGP 1200.00</span></div>
+                    <a href="#" class="btn">check now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/aswan.jpeg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i> aswan</h3>
+                    <p>مدينة أسوان هي عاصمة محافظة أسوان في مصر</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">EGP 950.00 <span>EGP 1350.00</span></div>
+                    <a href="#" class="btn">check now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/sharm .jpeg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i> Sharm El-Shaikh</h3>
+                    <p>شرم الشيخ هي مدينة سياحية مصرية، تقع عند ملتقى خليجي العقبة والسويس على ساحل البحر الأحمر ء </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">EGP 2800.00 <span>EGP 3200.00</span></div>
+                    <a href="#" class="btn">check now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/sinia.jpeg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i> sinai</h3>
+                    <p>شبه جزيرة سيناء أو سيناء تُلقّب بأرض الفيروز، هي شبه جزيرة صحراوية مثلثة الشكل</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">EGP 1800.00 <span>EGP 2100.00</span></div>
+                    <a href="#" class="btn">check now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/cairo.jpeg" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i> Egypt</h3>
+                    <p>القاهرة هي عاصمة جمهورية مصر العربية وأكبر وأهم مدنها على الإطلاق</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">EGP 3000.00 <span>EGP 3300.00</span></div>
+                    <a href="#" class="btn">check now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------->
+
+    <section class="packages" id="offers">
+
+        <h1 class="heading">
+            <span>o</span>
+            <span>f</span>
+            <span>f</span>
+            <span>e</span>
+            <span>r</span>
+            <span>s</span>
+        </h1>
+
+        <div class="container">
+            <div class="box">
+                <img src="images/nile.jpeg" alt="">
+                <div class="content">
+                    <h3>aswan</h3>
+                    <p>بــــــــــ 500 جنية بس احجز نايل كروز بالاقصر واسوان شاملة الاقامة والوجبات بوفية مفتوح والمزارات والارشاد السياحي  وادفع الباقي لما توصل المركب .</p>
+                    <a href="" class="btn">See more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/green.jpeg" alt="">
+                <div class="content">
+                    <h3>alex</h3>
+                    <p>فندق جرين بلازا إن الاسكندرية
+    
+                        استمتع معنا باقامة مميزة في فندق جرين بلازا ان الاسكندرية, اقضي امتع الاوقات بفندق جرين بلازا ان, افضل الاسعار لفندق جرين بلازا ان مع فلاينج كاربت 
+                        
+                        3ايام/ ليلتين
+                
+                        1000 </p>
+                    <a href="" class="btn">See more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/evoo.jpeg" alt="">
+                <div class="content">
+                    <h3>alex</h3>
+                    <p>فندق ايفو المنتزه
+  
+                        اقضى معنا بفندق ايفو المنتزة, بادر بالحجز معنا في فندق ايفو المنتزة واحصل علي عروض وخصومات مميزه, انضم معنا الي رحلتنا المميزه لفندق ايفو المنتزة بالاسكندرية
+                        
+                        لمده 3 ايام / 2 ليله
+                        1066</p>
+                    <a href="" class="btn">See more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/pramidz.jpeg" alt="">
+                <div class="content">
+                    <h3>cairo</h3>
+                    <p>فندق بيراميزا القاهرة سويتس ( 1100 )
+
+
+                        3 أيام / 2 ليلة</p>
+                    <a href="" class="btn">See more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/sharm (2).jpeg" alt="">
+                <div class="content">
+                    <h3>Sharm El-Shaikh</h3>
+                    <p>4 ايام 3 ليالي
+                        فندق الجافى ريزورت اكوا بارك
+                        يقع بخليج نعمة
+                        صف أول علي البحر بشاطئ رملي كبير جدا</p>
+                    <a href="" class="btn">See more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/g-1.jpg" alt="">
+                <div class="content">
+                    <h3>cairo</h3>
+                    <p>اكتشف تاريخ مصر الفرعونية في جولة لمدة يومين تأخذك من الجيزة إلى القاهرة. قم بزيارة تمثال أبو الهول وقم بزيارة أهرامات خفرع ومنقرع.</p>
+                    <a href="" class="btn">See more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/hur.jpeg" alt="">
+                <div class="content">
+                    <h3>Hurghada</h3>
+                    <p>هاواى لو جاردن ريزورت أكوا بارك (للعائلات والأزواج فقط)
+
+
+                        4 أيام / 3 ليالي
+                        2715 جنيه</p>
+                    <a href="" class="btn">See more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/heer.jpeg" alt="">
+                <div class="content">
+                    <h3>Hurghada</h3>
+                    <p>منتجع بالم رويال - خليج سوما
+
+
+                        4 أيام / 3 ليالي
+                        7125 LE</p>
+                    <a href="" class="btn">See more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/tolip.jpeg" alt="">
+                <div class="content">
+                    <h3>aswan</h3>
+                    <p>فندق توليب اسوان
+    
+                         احجز رحلتك معنا الان واحصل علي تخفيضات مميزه لفندق توليب اسوان, احجز بافضل الاسعار بفندق توليب اسوان
+                        
+                        اربعه ايام / ثلاث ليالي
+                        تفاصيل
+                        4000</p>
+                    <a href="" class="btn">See more</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!----------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------->
+    
+    <section class="review" id="review">
+
+        <h1 class="heading">
+            <span>r</span>
+            <span>e</span>
+            <span>v</span>
+            <span>i</span>
+            <span>e</span>
+            <span>w</span>
+        </h1>
+
+        <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/3G5B5974 copy.jpg" alt="">
+                        <h3>Mina Philip</h3>
+                        <p> Egypt is a captivating and enchanting destination that offers a rich tapestry of history, culture, and natural beauty. I hold a highly positive opinion about tourism in Egypt.</p>
+
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/mahdy.jpeg" alt="">
+                        <h3>mahdy</h3>
+                        <p> Egypt is   a highly positive opinion about tourism in Egypt.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/yara.jpeg" alt="">
+                        <h3>yara</h3>
+                        <p> Egypt is a captivating and enchanting destination that offers  beauty I hold a highly positive opinion about tourism in Egypt.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/ahmed.jpeg" alt="">
+                        <h3>Ahmed</h3>
+                        <p>   As someone who has had the opportunity to explore this extraordinary country, I hold a highly positive opinion about tourism in Egypt.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <!----------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------->
+
+  
+    <!------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>about us</h3>
+                <p>Tourism in Egypt is a captivating and rewarding experience that offers a blend of ancient wonders, cultural immersion, and natural beauty. As one of the oldest tourist destinations in the world, Egypt has a rich history that continues to enthrall travelers from all corners of the globe.</p>
+            </div>
+            <div class="box">
+                <h3>Branchs</h3>
+                <a href="#">egypt</a>
+                <a href="#">aswan</a>
+                <a href="#">alex</a>
+                <a href="#">sinai</a>
+                <a href="#">Sharm El-Shaikh</a>
+                <a href="#">Hurghada</a>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">home</a>
+                <a href="#">booking</a>
+                <a href="#">Trip</a>
+                <a href="#">offers</a>
+                <a href="#">review</a>
+                <a href="#">contact</a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="https://www.facebook.com/profile.php?id=100004812456059">facebook</a>
+                <a href="https://www.instagram.com/mina_philip_7/">instagram</a>
+            </div>
+        </div>
+        <h1 class="created">created by <span>Mina Philip</span> all right reserved</h1>
+    </section>
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="travel.js"></script>
+</body>
+</html>
