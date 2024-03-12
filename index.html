@@ -596,16 +596,7 @@
     <script >
         window.onload = function () {
             
-            /*fetch('./users.json')
-            .then(response => response.json())
-            .then(data => {
-                const userList = document.getElementById('users-list');
-                data.forEach(user => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = `${user.name} (${user.age} سنة)`;
-                    userList.appendChild(listItem);
-                });
-            }).catch(error => console.error('حدث خطأ في جلب البيانات:', error));*/
+          
 
             const hotelsContainer = document.querySelector("#result .content");
             const searchInput = document.getElementById("search-bar");
@@ -613,7 +604,7 @@
             const allHotels = [...Hotels]
             searchButton.addEventListener("click", () => {
                 const filtered = allHotels.filter(hotel=>hotel.city.toLowerCase().indexOf(searchInput.value.toLowerCase()) > -1)
-                console.log(searchInput.value)
+                
                 hotelsContainer.innerHTML = renderList(filtered);
             });
         };

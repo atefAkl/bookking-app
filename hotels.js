@@ -186,6 +186,79 @@ const Hotels = [
       "/images/hotels/Elg-Yakts.jpg",
     ],
   },
+  {
+    id: 4,
+    city: "Cairo",
+    name: "Indiand Jones Hotel Ltd",
+    desc: "ndiand Jones is a five-star hotel belonging to the Kempinski Hotel chain, located in Soma Bay, Egypt.The hotel opened in 2009 and has 325 rooms and suites, three restaurants, one large bar, a resort, and a small exercise room.",
+    cover: "/images/hotels/Kempinski-cover.jpeg",
+    image: "/images/hotels/camb-main.jpg",
+    rating: [0, 500, 200, 4000, 120],
+    stars: 9,
+    prices: [
+      {
+        name: "Single Room",
+        min: 50,
+        max: 120,
+        meals: "Breakfast, Dinner",
+        remain: 22,
+      },
+      {
+        name: "Double Room",
+        min: 80,
+        max: 180,
+        meals: "Breakfast, Dinner",
+        remain: 9,
+      },
+      {
+        name: "Flat Room",
+        min: 220,
+        max: 500,
+        meals: "Breakfast, Dinner",
+        remain: 2,
+      },
+    ],
+    offers: [
+      {
+        offer: "Discount 50% returnd clients",
+        endsIn: "20/4/2024",
+        status: false,
+      },
+      {
+        offer: "extra meal for double rooms",
+        endsIn: "20/5/2024",
+        status: true,
+      },
+    ],
+    history: [
+      "Thirty years ago Samih Sawiris, Chairman of Orascom Development Holding, El Gouna’s parent company, found that beautiful spot, conveniently located just north of Hurghada on the west coast of the Red Sea. It wasn’t long before Sawiris’ friends, struck by the splendor of the azure waters and dramatic backdrop of mountains, asked to join him, and the town slowly blossomed into the vibrant community that it is today.",
+    ],
+    contact: [
+      {
+        type: "Phone Number",
+        val: "+20653549702",
+      },
+      {
+        type: "Fax Number",
+        val: "+20653549065",
+      },
+      {
+        type: "Customer Support Email",
+        val: "info@elgouna.com",
+      },
+      {
+        type: "Whatsapp",
+        val: "+2065354906599",
+      },
+    ],
+    images: [
+      "/images/hotels/k_1.jpeg",
+      "/images/hotels/El-gouna1.jpg",
+      "/images/hotels/elg-sea-view.jpg",
+      "/images/hotels/elg-turtles-hour.jpg",
+      "/images/hotels/Elg-Yakts.jpg",
+    ],
+  },
 ];
 
 function renderList(arr) {
