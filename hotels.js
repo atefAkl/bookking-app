@@ -204,7 +204,7 @@ function renderList(arr) {
               <p> [${votes}] <span style="color: ${setStarsColor(
       rate
     )}">${drowStars(rate)}</span> [${rate}]</p>
-              <a href="/pages/hotel.html?id=${
+              <a href="./pages/hotel.html?id=${
                 hotel.id
               }" class="explore">Explore Offers</a>
           </div>
