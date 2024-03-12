@@ -162,9 +162,9 @@
         document.querySelector(".stars-count").innerHTML = hotel.stars;
         document.querySelector("#history").innerHTML = hotel.history;
         document.querySelector("#hotel-img").style.backgroundImage =
-        "url('" + hotel.image + "')";
+        "url('.." + hotel.image + "')";
         document.querySelector("#banner").style.backgroundImage =
-        "url('" + hotel.cover + "')";
+        "url('.." + hotel.cover + "')";
         const [votes, rate] = calcRating(hotel.rating);
         const ratingStars = document.createElement('div')
         ratingStars.innerHTML = drowStars(rate)
@@ -201,7 +201,7 @@
 
         const hotelImages = document.getElementById('images')
         const renderedImages = hotel.images.map((img)=>{
-          return `<img src="${img}" alt="${hotel.name}"/>`
+          return `<img src="..${img}" alt="${hotel.name}"/>`
         })
         hotelImages.innerHTML=renderedImages
 
