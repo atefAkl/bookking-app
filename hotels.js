@@ -125,6 +125,7 @@ const Hotels = [
     cover: "/images/hotels/Kempinski-cover.jpeg",
     image: "/images/hotels/camb-main.jpg",
     rating: [0, 500, 200, 4000, 120],
+    stars: 5,
     prices: [
       {
         name: "Single Room",
@@ -193,7 +194,7 @@ function renderList(arr) {
 
     return `
       <div class="box">
-          <div class="card-img" style="background-image: url('${
+          <div class="card-img" style="background-image: url('.${
             hotel.image
           }')"></div>
           <div class="card-content">
