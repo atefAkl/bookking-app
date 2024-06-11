@@ -7,7 +7,6 @@
     <title>TRIPVUM</title>
     <link rel="stylesheet" href="./files/css/style.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 </head>
@@ -17,22 +16,22 @@
             <a href="#" class="logo">
                 <img src="images/Logo 500x500 px.png" alt="logo">
             </a>
+            
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#booking">booking</a>
+                <a href="#trip">Trip</a>
+                <a href="#offers">offers</a>
+                <a href="#review">review</a>
+                <a href="#contact">contact</a>
+            </nav>
+            <div class="icon">
+                <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
+                <i class="fas fa-user" onclick="showform()"></i>
+                
+            </div>
+            
         </div>
-        
-        <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#booking">booking</a>
-            <a href="#trip">Trip</a>
-            <a href="#offers">offers</a>
-            <a href="#review">review</a>
-            <a href="#contact">contact</a>
-        </nav>
-        <div class="icon">
-            <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
-            <i class="fas fa-user" onclick="showform()"></i>
-
-        </div>
-        
     </header>
 
     <div class="login-form" id="loginform" autocomplete="off">
@@ -152,51 +151,7 @@
                       
                   </div>
               </div>
-        <!-- <div class="row">
-          <div class="book">
-            <form class="book-from">
-                    <div class="from-item">
-                      <label for="checkin-data">Check in Data :</label>
-                      <input type="date" id="checkin-data">
-                    </div>
-                   <div class="from-item">
-                       <label for="checkout-data">Check out Data :</label>
-                       <input type="date" id="checkout-data">
-                    </div>
-                    <div class="from-item">
-                        <label for="destination">destination :</label>
-                        <input type=" number" min="0" value="" id="destination">
-                     </div>
-                    <div class="from-item">
-                       <label for="children">Children :</label>
-                       <input type=" number" min="0" value="" id="children">
-                    </div>
-                    <div class="from-item">
-                        <label for="Arrivall">Arrivall :</label>
-                        <input type=" number" min="0" value="" id="Arrivall">
-                     </div>
-                     <div class="from-item">
-                        <label for="adult">How Many :</label>
-                        <input type="number" min="1" value="1" id="adult">
-                    </div>
-                    
-                    <form action="./action_page.php">
-                        <label for="vehicle1" style="display: inline-block; margin: 0; padding: 0; font-size: 14px;">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="transform: scale(1.5);vertical-align: middle; margin: 0; padding: 0; width: auto; height: 20px;">
-                            Flight
-                        </label>
-                        <label for="vehicle2" style="display: inline-block; margin: 0; padding: 0; font-size: 14px;">
-                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" style="transform: scale(1.5);vertical-align: middle; margin: 0; padding: 0; width: auto; height: 20px;">
-                            Hotel
-                        </label>
-                    </form>
-                    
-                    <div style="display: flex; justify-content: center;">
-                        <input type="submit" class="btn" value="Book Now" style="width: 350px;">
-                    </div>
-                    
-                </div>
-            </div> -->
+       
         </section>
     <!------------------------------------------------------------------------------------>
     <!------------------------------------------------------------------------------------>
@@ -224,7 +179,7 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">EGP 1150.00 <span>EGP 1400.00</span></div>
-                    <a href="#" class="btn">check now</a>
+                    <a href="./checkout/hurghada.html" class="btn">check now</a>
                 </div>
             </div>
             <div class="box">
@@ -240,7 +195,7 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">EGP 800.00 <span>EGP 1200.00</span></div>
-                    <a href="#" class="btn">check now</a>
+                    <a href="./checkout/alex.html" class="btn">check now</a>
                 </div>
             </div>
             <div class="box">
@@ -256,7 +211,7 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">EGP 950.00 <span>EGP 1350.00</span></div>
-                    <a href="#" class="btn">check now</a>
+                    <a href="./checkout/aswan.html" class="btn">check now</a>
                 </div>
             </div>
             <div class="box">
@@ -272,7 +227,7 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">EGP 2800.00 <span>EGP 3200.00</span></div>
-                    <a href="#" class="btn">check now</a>
+                    <a href="./checkout/Sharm El-Shaikh.html" class="btn">check now</a>
                 </div>
             </div>
             <div class="box">
@@ -288,13 +243,13 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">EGP 1800.00 <span>EGP 2100.00</span></div>
-                    <a href="#" class="btn">check now</a>
+                    <a href="./checkout/Sinai.html" class="btn">check now</a>
                 </div>
             </div>
             <div class="box">
                 <img src="./images/cairo.jpeg" alt="">
                 <div class="content">
-                    <h3><i class="fas fa-map-marker-alt"></i> Egypt</h3>
+                    <h3><i class="fas fa-map-marker-alt"></i> Cairo</h3>
                     <p>القاهرة هي عاصمة جمهورية مصر العربية وأكبر وأهم مدنها على الإطلاق</p>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -304,7 +259,7 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="price">EGP 3000.00 <span>EGP 3300.00</span></div>
-                    <a href="#" class="btn">check now</a>
+                    <a href="./checkout/cairo.html" class="btn">check now</a>
                 </div>
             </div>
         </div>
@@ -368,7 +323,7 @@
 
 
                         3 أيام / 2 ليلة</p>
-                    <a href="" class="btn">See more</a>
+                    <a href="./pages/hotel.html?id=4" class="btn">See more</a>
                 </div>
             </div>
             <div class="box">
@@ -535,7 +490,7 @@
                     <input type="text" placeholder="subject">
                 </div>
                 <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
-                <input type="submit" class="btn" value="send message">
+                <button type="submit" class="btn"> Send Message</button>
             </form>
         </div>
     </section>
@@ -582,8 +537,10 @@
     <div id="result" class="">
         <div class="search-form">
             <label for="search-bar" id="search-button"><i class="fa fa-search"></i></label>
-            <input type="search" id="search-bar" placeholder="What you looking for...">
-            
+            <select id="search-bar" >
+                <option hidden>اختر المدينة</option>
+                <option value="">الكل</option>
+            </select>
         </div>
         <div class="content">
             
@@ -595,19 +552,47 @@
     <script src="./travel.js"></script>
     <script >
         window.onload = function () {
-            
-          
-
             const hotelsContainer = document.querySelector("#result .content");
             const searchInput = document.getElementById("search-bar");
             const searchButton = document.getElementById("search-button");
             const allHotels = [...Hotels]
-            searchButton.addEventListener("click", () => {
+            const cities = new Set()
+            allHotels.forEach((l)=>{
+                return cities.add(l.city)
+            })
+            cities.forEach(city=>{
+                console.log(city)
+                let newOption = document.createElement('option')
+                newOption.value = city
+                newOption.textContent = city
+                searchInput.appendChild(newOption)
+
+            })
+            console.log(cities)
+            searchInput.addEventListener("change", () => {
                 const filtered = allHotels.filter(hotel=>hotel.city.toLowerCase().indexOf(searchInput.value.toLowerCase()) > -1)
-                
                 hotelsContainer.innerHTML = renderList(filtered);
             });
         };
+
+        $(document).ready(function() {
+            const $child = $('.booking');
+            const $parent = $childContent.closest('#trip');
+            
+            // تغيير الرتفاع للأب مع تغير ارتفاع الابن
+            $childContent.on('DOMSubtreeModified', function() {
+                adjustParentHeight();
+            });
+            
+            // الحفاظ على ارتفاع ديناميكى للقسم مع تغير المحتوى بداخله
+            function adjustParentHeight() {
+                const childHeight = $child.height();
+                $parent.css('height', childHeight + 50 + 'px');
+            }
+            
+            // تعيين الارتفاع عن تحميل الصفحة
+            adjustParentHeight();
+        });
     </script>
 </body>
 </html>

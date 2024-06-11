@@ -23,18 +23,18 @@
         <a href="../index.html" class="logo">
           <img src="../images/Logo 500x500 px.png" alt="logo" />
         </a>
-      </div>
-
-      <nav class="navbar">
-        <a href="../index.html#home">home</a>
-        <a href="../index.html#booking">booking</a>
-        <a href="../index.html#trip">Trip</a>
-        <a href="../index.html#offers">offers</a>
-        <a href="../index.html#review">review</a>
-        <a href="../index.html#contact">contact</a>
-      </nav>
-      <div class="icon">
-        <i class="fas fa-user" onclick="showform()"></i>
+        
+        <nav class="navbar">
+          <a href="../index.html#home">home</a>
+          <a href="../index.html#booking">booking</a>
+          <a href="../index.html#trip">Trip</a>
+          <a href="../index.html#offers">offers</a>
+          <a href="../index.html#review">review</a>
+          <a href="../index.html#contact">contact</a>
+        </nav>
+        <div class="icon">
+          <i class="fas fa-user" onclick="showform()"></i>
+        </div>
       </div>
     </header>
 
@@ -80,11 +80,11 @@
       </form>
     </div>
 
-    <section id="hotel-info">
+    <section id="hotel-info" dir="rtl">
       <div class="container">
         <div id="banner">
           <div class="profile">
-            <div class="stars">[ <span class="stars-count">  </span> stars]</div>
+            <div class="stars">[ <span class="stars-count">  </span> stars ]</div>
             <div id="hotel-img"></div>
             <div id="hotel-name"></div>
           </div>
@@ -92,52 +92,64 @@
         <div class="space" style="height: 120px"></div>
         <nav>
           <ul class="navs">
-            <li class="nav-item active" data-open="about">about</li>
-            <li class="nav-item" data-open="pricing">pricing</li>
-            <li class="nav-item" data-open="images">images</li>
-            <li class="nav-item" data-open="offers">offers</li>
+            <li class="nav-item active" data-open="about">عن الفندق</li>
+            <li class="nav-item" data-open="pricing">الأسعار</li>
+            <li class="nav-item" data-open="images">صور</li>
+            <li class="nav-item" data-open="offers">عروض</li>
+            <li class="nav-item" data-open="contact"> اتصل بنا </li>
           </ul>
           <div class="nav-contents">
             <div class="tab active" id="about">
               <h3 id="hotel-location"></h3>
-              <h2>About <span class="hotel-name"></span></h2>
+              <h3><span class="hotel-name"></span></h3>
               <p id="description"></p>
-              <h2>History </span></h2>
+              <h3> نبذة عن الفندق </span></h3>
               <p id="history"></p>
 
+              <h3>مميزات الفندق</h3>
+              <div id="advantages"></div>
               <div id="rating-section">
-                <h3>Clients Ratings <span id="rating"></span></h3>
-                <h3>Total Votes <span id="votes"></span></h3>
-                <h3> Rate <span id="rate"></span></h3>
-                <h3>details:</h3>
+                <h3>تقييمات العملاء <span id="rating"></span></h3>
+                <h3>التقييمات <span id="votes"></span></h3>
+                <p> المعدل <span id="rate"></span></p>
+                <h3>تفاصيل:</h3>
                 <p id="rating-details"></p>
               </div>
             </div>
             <div class="tab" id="pricing">
-              <h1 style="font-size: 32px;">Pricing List</h1>
+              <h1 style="font-size: 1.3rem;"> قائمة أسعار </h1>
               <table>
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>Name</th>
-                    <th>Min</th>
-                    <th>Max</th>
-                    <th>Meals</th>
-                    <th>Remaining Units</th>
+                    <th>اسم</th>
+                    <th>حد أدنى</th>
+                    <th>حد أقصى</th>
+                    <th>وجبات</th>
+                    <th>متبقى للحجز</th>
                   </tr>
                 </thead>
                 <tbody>
 
                 </tbody>
               </table>
+
               <br>
+              
+              <h1 style="font-size: 1.3rem;">شروط الخدمة</h1>
+              <div id="terms" class="terms">
+
+              </div>
               <br>
-              <br>
-              <h1 style="font-size: 32px;">Contacts Info</h1>
-              <table class="contacts"></table>
+              <button class="btn">الاطلاع على العروض</button>
+              
             </div>
-            <div class="tab" id="images">images</div>
-            <div class="tab" id="offers">offers</div>
+            <div class="tab" id="images">صور</div>
+            <div class="tab" id="offers">عروض</div>
+            <div class="tab" id="contact" style="padding: 2rem; text-align: center;">
+              <h1 style="font-size: 32px;">بيانات الاتصال</h1>
+              <table class="contacts" style="width: 50%; border: 1px solid; margin: auto"></table>
+            </div>
           </div>
         </nav>
       </div>
@@ -154,6 +166,10 @@
         const urlParams = new URLSearchParams(window.location.search);
         const hotels = Hotels;
         const hotel = hotels.find((h) => h.id == urlParams.get("id"));
+
+        if (hotel) {
+          
+       
         
         document.querySelector("#hotel-name").innerHTML = hotel.name;
         document.querySelector(".hotel-name").innerHTML = hotel.name;
@@ -191,12 +207,28 @@
           let barVotes = document.createElement('div')
           barVotes.innerHTML = hotel.rating[i]
           barVotes.classList.add('bar-votes')
+          barVotes.style.padding = '2px 1rem'
           bar.appendChild(barText)
           bar.appendChild(barColored)
           bar.appendChild(barVotes)
           document.querySelector("#rating-details").appendChild(bar);
           
         }
+
+        //advantages part
+        const advData = hotel.advantages
+        
+        const advantagesDiv = document.getElementById('advantages')
+        const advContainer = document.createElement('UL')
+        advData.forEach ((elem)=>{
+          var advElem = document.createElement('LI')
+          advElem.classList.add('adv-item')
+            advElem.innerHTML = elem
+            advContainer.appendChild(advElem)
+          }  
+        )
+        console.log(advData)
+      advantagesDiv.appendChild(advContainer);
         // Rendering Images Section
 
         const hotelImages = document.getElementById('images')
@@ -216,22 +248,54 @@
               <td>${item.max}$</td>
               <td>${item.meals}</td>
               <td>${item.remain}</td>
-              </tr>
-          `)
-        })
-        pricingBody.innerHTML=renderedPricing
-
-        // Rendering Contact Info
-        const contact = document.querySelector('#pricing table.contacts')
-        const renderedContacts = hotel.contact.map((item)=>{
-          return (`
-            <tr>
-              <td>${item.type}:</td>
-              <td>${item.val}:</td>
             </tr>
           `)
         })
-        contact.innerHTML=renderedContacts
+        renderedPricing.forEach((pricing)=>{
+          pricingBody.innerHTML+=pricing
+        })
+
+        // Rendering Contact Info
+        const contact = document.querySelector('#contact table.contacts')
+        const contactInfo = hotel.contact
+
+        contactInfo.forEach((item)=> {
+          let contactsRow = document.createElement('tr'); 
+          let contactType = document.createElement('td')
+          contactType.innerText=item.type; 
+          let contactVal = document.createElement('td')
+          contactVal.innerText=item.val; 
+          contactsRow.appendChild(contactType)
+          contactsRow.appendChild(contactVal)
+          contact.appendChild(contactsRow)
+        }
+          
+          
+        )
+        
+        // Terms and conditions
+
+        console.log(hotel.terms)
+        const terms = document.getElementById('terms')
+        const hotelTerms = hotel.terms
+        hotelTerms.forEach((term)=>{
+          let termTitle = document.createElement('h4')
+          termTitle.classList.add('term-title')
+          termTitle.innerHTML=term.title
+          let termsList = document.createElement('ul')
+          termsList.classList.add('term-items')
+          term.items.forEach((tli)=>{
+            let li = document.createElement('li')
+            li.textContent=tli
+            termsList.appendChild(li)
+          })
+
+          let termItem = document.createElement('div')
+          termItem.classList.add('term-container')
+          termItem.appendChild(termTitle)
+          termItem.appendChild(termsList)
+          terms.appendChild(termItem)
+        })
 
 
         const navItems = document.querySelectorAll('.nav-item')
@@ -252,7 +316,12 @@
             document.getElementById(the_target).classList.add('active')
           })
         })
+      
+        } else {
+          return confirm('hotel is not exists')
+        }
       });
+
 
 
 

@@ -1,41 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 :root {
-  --blue: #0080ff;
+  --bg-dark-blue: #001c38;
+  --text-dark-blue: #002b57;
+  --bg-med-blue: #0254a7;
+  --text-med-blue: #015cb8;
+  --bg-light-blue: #597fa5;
+  --text-light-blue: #c6ddf5;
+  --text-light: #ffffff;
+  --input-bg-dark: #f6fae2;
 }
 
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Cairo, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-transform: capitalize;
   border: none;
   text-decoration: none;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 html {
-  font-size: 62.5%;
+  font-size: 14px;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-body * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-family: Cairo, sans-serif;
 }
 
 header {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   right: 0;
-  background: #0a0036;
+  background: var(--bg-dark-blue);
+  z-index: 999999;
+  padding: 0.2rem;
+}
+header .container {
+  width: 90%;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  z-index: 1000;
-  padding: 0.2rem 6%;
+  justify-content: space-between;
 }
 header .logo img {
   float: left;
@@ -45,23 +55,23 @@ header .logo img {
 }
 
 header .navbar a {
-  color: #fff;
-  font-size: 2rem;
+  color: var(--text-light-blue);
+  font-size: 1.3rem;
   margin: 0 0.8rem;
   top: 100%;
 }
 
 header .navbar a:hover {
-  color: #00f7ff;
+  color: var(--text-light);
 }
 header .icon i {
-  font-size: 2.5rem;
-  color: #fff;
+  font-size: 1.3rem;
+  color: var(--text-light-blue);
   cursor: pointer;
   margin-right: 2rem;
 }
 header .icon i:hover {
-  color: #00f7ff;
+  color: var(--text-light);
 }
 .login-form {
   position: fixed;
@@ -69,7 +79,7 @@ header .icon i:hover {
   left: 0;
   min-height: 100vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--text-light-blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,31 +92,31 @@ header .icon i:hover {
   position: absolute;
   top: 2rem;
   right: 3rem;
-  font-size: 5rem;
-  color: #fff;
+  font-size: 2rem;
+  color: var(--text-light);
   cursor: pointer;
 }
 .login-form form {
   margin: 2rem;
-  padding: 1.5rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  background: #fff;
+  background: var(--bg-light-blue);
   width: 50rem;
 }
 .login-form form h3 {
   font-size: 3rem;
-  color: #444;
-  text-transform: uppercase;
+  color: var(--text-light-blue);
+    text-transform: uppercase;
   padding: 1rem 0;
   text-align: center;
 }
 .login-form form .box {
   width: 100%;
-  padding: 1rem;
+  padding: 0.3rem 1rem;
   font-size: 1.7rem;
-  color: #333;
+  color: var(--text-dark-blue);
   margin: 0.6rem 0;
-  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  border: 0.1rem solid var(--bg-dark-blue);
   text-transform: none;
 }
 .btn {
@@ -117,11 +127,11 @@ header .icon i:hover {
   border: 0.2rem solid var(--blue);
   cursor: pointer;
   font-size: 1.7rem;
-  background: rgba(255, 165, 0, 0.2);
+  background: var(--input-bg-dark);
 }
 .btn:hover {
-  color: #fff;
-  background: var(--blue);
+  color: var(--text-light);
+  background: var(--bg-med-blue);
 }
 .login-form form .btn {
   display: block;
@@ -136,14 +146,14 @@ header .icon i:hover {
 .login-form form p {
   padding: 0.5rem 0;
   font-size: 1.5rem;
-  color: #666;
+  color: var(--text-dark-blue);
 }
 .login-form form p a {
-  color: var(--blue);
+  color: var(--text-med-blue);
 }
 #menu-bar {
-  color: #fff;
-  border: 0.1rem solid #fff;
+  color: var(--text-light);
+  border: 0.1rem solid var(--text-light);
   border-radius: 0.5rem;
   font-size: 3rem;
   padding: 0.5rem 1.2rem;
@@ -170,7 +180,7 @@ body {
   padding-top: 20px;
   overflow: scroll;
   right: 5%;
-  background-color: #d8d8d8;
+  background-color: var(--bg-med-blue);
 }
 
 #result .content {
@@ -183,13 +193,13 @@ body {
 
 .search-form {
   position: relative;
-  background: #aaa5a5;
+  background: var(--bg-dark-blue);
   display: flex;
   align-items: center;
   width: 80%;
   margin: 1rem auto;
   padding: 1.5rem;
-  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-top: 0.1rem solid var(--bg-dark-blue);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -197,7 +207,7 @@ body {
   width: 50%;
   height: 50px;
   padding: 1rem 3rem 0;
-  color: #333;
+  color: var(--bg-med-blue);
   font-size: 1.7rem;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
@@ -256,7 +266,7 @@ body {
   font-size: 16px;
 }
 #result .content .box p.desc {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Cairo, sans-serif;
   font-size: 12px;
   line-height: 1.6;
 }
@@ -274,12 +284,12 @@ body {
     display: initial;
   }
   header .navbar {
-    position: absolute;
+    position: fixed;
     top: 100%;
     left: 0;
     right: 0;
     background: #333;
-    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-top: 0.1rem solid --bg-dark-blue;
     padding: 1rem 2rem;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
@@ -317,13 +327,13 @@ section {
 }
 .home .content h3 {
   font-size: 4.5rem;
-  color: #fff;
+  color: var(--text-light);
   text-transform: uppercase;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0.3rem 0.5rem var(--bg-dark-blue);
 }
 .home .content p {
   font-size: 2.5rem;
-  color: #fff;
+  color: var(--text-light);
   padding: 0.5rem 0;
 }
 .home .video-container video {
@@ -338,7 +348,7 @@ section {
 .home .controls {
   padding: 1rem;
   border-radius: 5rem;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--bg-dark-blue);
   position: relative;
   top: 10rem;
 }
@@ -348,27 +358,27 @@ section {
   width: 2rem;
   display: inline-block;
   border-radius: 70%;
-  background: #fff;
+  background: var(--text-light);
   cursor: pointer;
   margin: 0 0.5rem;
 }
 .home .controls .video-btn.blue {
-  background: var(--blue);
+  background: var(--input-bg-dark);
 }
 .heading {
   text-align: center;
   padding: 2.5rem 0;
 }
-.heading span {
+section h1.heading span {
   font-size: 3.5rem;
   background: var(--blue);
-  color: #fff;
+  color: var(--text-light);
   border-radius: 0.5rem;
   padding: 0.2rem 1rem;
 }
 .book-from {
   background-image: url(../../images/bookformbg.jpg);
-  color: #020202;
+  color: var(--bg-dark-blue);
   padding-left: 30px;
   padding-right: 30px;
   padding-inline-start: 3%;
@@ -376,8 +386,8 @@ section {
   padding-bottom: 3%;
 }
 .book {
-  background-color: #fffefe;
-  color: #020202;
+  background-color: var(--bg-light-blue);
+  color: var(--text-dark-blue);
   padding: 5px;
   padding-top: 0px;
 }
@@ -397,8 +407,9 @@ section {
 }
 .book-from input[type="submit"] {
   margin: 10px 0 0 0;
-  background: rgb(6, 40, 192) border-box 1px solid #fff;
-  color: #fff;
+  background: var(--bg-dark-blue);
+  border: 1px solid var(--text-light);
+  color: var(--text-light);
 }
 .book-from label,
 .book-from select,
@@ -441,6 +452,15 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+section h1.heading span {
+  width: 6rem;
+  height: 6rem;
+  display: inline-block;
+  text-align: center;
+  background-color: var(--bg-dark-blue);
+  color: var(--text-light)
 }
 .packages .container .box {
   flex: 1 1 30rem;
@@ -501,7 +521,7 @@ section {
 }
 .services .container .box h3 {
   font-size: 2.5rem;
-  color: #333;
+  color: var(--text-light);
 }
 .services .container .box p {
   font-size: 1.5rem;
@@ -587,7 +607,7 @@ section {
   align-items: center;
 }
 .contact .row .image {
-  flex: 1 1 35rem;
+  flex: 1 1 25rem;
 }
 .contact .row image img {
   width: 100%;
@@ -606,6 +626,7 @@ section {
 
 .contact .row form .inputbox input,
 .contact .row form textarea {
+  box-shadow: 0 0 5px 2px #ccc;
   width: 49%;
   margin: 1rem 0;
   padding: 1rem;
@@ -613,12 +634,16 @@ section {
   color: #333;
   background: #f7f7f7;
 }
+.contact .row form button {
+  box-shadow: 0 0 5px 2px #ccc;
+
+}
 .contact .row form textarea {
   height: 15rem;
   width: 100%;
 }
 .footer {
-  background: #0a0035;
+  background: var(--bg-dark-blue);
 }
 .footer .box-container {
   display: flex;
@@ -627,36 +652,37 @@ section {
 }
 .footer .box-container .box {
   padding: 1rem 0;
-  flex: 1 1 25rem;
+  flex: 1 1 15rem;
+  text-align: center;
 }
 .footer .box-container .box h3 {
-  font-size: 2.5rem;
+  font-size: 1.3rem;
   padding: 0.7rem 0;
-  color: #fff;
+  color: var(--text-light);
 }
 
 .footer .box-container .box p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 0.7rem 0;
-  color: #eee;
+  color: var(--text-light-blue);
 }
 .footer .box-container .box a {
-  font-size: 1.5rem;
-  padding: 0.7rem 0;
-  color: #eee;
+  font-size: 1rem;
+  padding: 0.2rem 0.5;
+  color: var(--text-light-blue);
   display: block;
 }
 .footer .box-container .box a:hover {
-  color: #00f7ff;
+  color: var(--text-light);
 }
 .footer .created {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem;
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: normal;
-  color: #fff;
+  color: var(--text-light-blue);
 }
 .footer .created span {
-  color: var(--blue);
+  color: var(--bg-light-blue);
 }
